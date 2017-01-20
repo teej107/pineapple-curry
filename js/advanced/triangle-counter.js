@@ -12,13 +12,13 @@ triangle(3) ---> 6
  * *
 * * *
 
-triangle(4) --->
+triangle(4) ---> 10
    *
   * *
  * * *
 * * * *
 
-triangle(5)
+triangle(5) --->
     *
    * *
   * * *
@@ -26,3 +26,10 @@ triangle(5)
 * * * * *
 
 */
+function triangleBlocks(rows)
+{
+    if(rows < 2)
+        return rows;
+    return rows + triangleBlocks(rows - 1);
+}
+console.log(triangleBlocks(9));
